@@ -16,9 +16,10 @@ This Rosling-style motion chart visualizes the trajectory of the COVID-19 pandem
 ### The Narrative of the Movement
 When you watch the animation, you are seeing the fundamental laws of network-driven transmission:
 
-1. **Shooting Upwards (The Outbreak):** At the bottom-left, cases are low. When a bubble shoots straight UP, an explosive outbreak is starting. The daily cases are multiplying logarithmically.
-2. **Moving Mostly Right & Hovering (The Core Pandemic):** Once the daily cases reach a peak capacity, the bubble stops going up and starts moving steadily to the right for 1-1.2 years. This is the tragic core of the pandemic—daily cases are consistently high, so the total cumulative cases (X-axis) just keeps grinding higher and higher over time. 
-3. **Falling Downwards (The Burnout):** Finally, as herd immunity, interventions, or viral burnout take effect, the bubble plummets straight DOWN. The wave is over, but the state remains far to the right, permanently scarred by its cumulative toll.
+1. **Shooting Upwards (The Wave):** At the start of a wave, cases are low. When a bubble shoots mostly UP, an explosive outbreak is starting. The daily cases are multiplying logarithmically.
+2. **Moving Right & Peaking (The Pivot):** As the wave hits its peak, the explosive vertical growth stops. The bubble pivots, moving horizontally to the right as the massive daily caseload adds swiftly to the total cumulative cases (X-axis).
+3. **Falling Downwards (The Burnout):** As the wave subsides due to interventions, viral burnout, or immunity, the bubble plummets DOWN. The massive wave is over, but the state is now pushed far to the right, permanently scarred by its cumulative toll. Successive waves repeat this cycle, forming multiple loops.
+4. **The Logarithmic Wall (The Visual Compression of 2021-2022):** You will notice the bubbles fly from left to right extremely fast in 2020, but then seem to hit a "wall" and stay huddled in a small horizontal space for 2021 and 2022. This is the effect of the logarithmic X-axis. Going from 1,000 to 100,000 early cases covers tremendous visual distance, but once a state has millions of cumulative cases, absorbing another massive wave of 2 million cases barely moves it to the right.
 
 Notice how the Hub states (Maharashtra, Delhi) lead the charge upwards, while peripheral states follow with a delay—proof of the network synchronization hypothesis discussed in this analysis.
 
