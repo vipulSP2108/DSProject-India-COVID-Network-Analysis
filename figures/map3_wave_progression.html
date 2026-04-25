@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4d2ac297c0a03328eb995cc9b697bf73 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    <div style="position:fixed;top:10px;left:50%;transform:translateX(-50%);
+     background:rgba(0,0,0,0.8);color:white;padding:10px 18px;
+     border-radius:8px;z-index:9999;font-size:14px;font-weight:bold">
+     📍 COVID-19 Wave Progression — India (toggle layers on right)
+</div>
+    
+            <div class="folium-map" id="map_4d2ac297c0a03328eb995cc9b697bf73" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4d2ac297c0a03328eb995cc9b697bf73 = L.map(
+                "map_4d2ac297c0a03328eb995cc9b697bf73",
+                {
+                    center: [20.5, 78.9],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0f3093892a13d97a60c656109c948ad9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0f3093892a13d97a60c656109c948ad9.addTo(map_4d2ac297c0a03328eb995cc9b697bf73);
+        
+    
+            var feature_group_2405e1d29765872542af352853e59025 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_527634c29607691423d8e13e4c621f68 = L.circleMarker(
+                [19.75, 75.71],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.805823799580214, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_527634c29607691423d8e13e4c621f68.bindTooltip(
+                `<div>
+                     <b>Maharashtra</b><br>Wave 1 (2020): 542,466 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ec5a2f69a6d246398134f91006008303 = L.circleMarker(
+                [10.85, 76.27],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.503899574368834, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_ec5a2f69a6d246398134f91006008303.bindTooltip(
+                `<div>
+                     <b>Kerala</b><br>Wave 1 (2020): 60,029 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_822d4395a3fd33859eefe94bc5d9ecde = L.circleMarker(
+                [15.32, 75.72],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.23305360167725, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_822d4395a3fd33859eefe94bc5d9ecde.bindTooltip(
+                `<div>
+                     <b>Karnataka</b><br>Wave 1 (2020): 50,112 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d39e7d2bc325871c8a7add31b663a17 = L.circleMarker(
+                [11.13, 78.66],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.155043715366476, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_2d39e7d2bc325871c8a7add31b663a17.bindTooltip(
+                `<div>
+                     <b>Tamil Nadu</b><br>Wave 1 (2020): 24,424 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c15d8e928dbdf479f93a2225ae715db = L.circleMarker(
+                [28.7, 77.1],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.9173637397588, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_2c15d8e928dbdf479f93a2225ae715db.bindTooltip(
+                `<div>
+                     <b>Delhi</b><br>Wave 1 (2020): 154,030 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c462cf682dfd39def5031fd0f0f755a9 = L.circleMarker(
+                [27.57, 80.1],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.862722462052403, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_c462cf682dfd39def5031fd0f0f755a9.bindTooltip(
+                `<div>
+                     <b>Uttar Pradesh</b><br>Wave 1 (2020): 148,520 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_314899f0b1053cb122fed5e62aeb8554 = L.circleMarker(
+                [27.39, 73.89],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.981081833499868, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_314899f0b1053cb122fed5e62aeb8554.bindTooltip(
+                `<div>
+                     <b>Rajasthan</b><br>Wave 1 (2020): 160,714 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f1d207f08727f538af8908bdaa1dd84b = L.circleMarker(
+                [22.26, 71.19],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.149709246080498, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_f1d207f08727f538af8908bdaa1dd84b.bindTooltip(
+                `<div>
+                     <b>Gujarat</b><br>Wave 1 (2020): 179,836 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c39378697694a259a0087bea8289310a = L.circleMarker(
+                [22.99, 87.85],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.629660561909734, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_c39378697694a259a0087bea8289310a.bindTooltip(
+                `<div>
+                     <b>West Bengal</b><br>Wave 1 (2020): 127,147 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ff36efb6b6fcfa7454bc24dffe33ba04 = L.circleMarker(
+                [15.91, 79.74],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.52793242597684, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_ff36efb6b6fcfa7454bc24dffe33ba04.bindTooltip(
+                `<div>
+                     <b>Andhra Pradesh</b><br>Wave 1 (2020): 231,411 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_10ebbe646199f634424df9a35a67ce0c = L.circleMarker(
+                [22.97, 78.66],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.684630772995888, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_10ebbe646199f634424df9a35a67ce0c.bindTooltip(
+                `<div>
+                     <b>Madhya Pradesh</b><br>Wave 1 (2020): 131,893 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5577772f33f734884d0522ed21bdec26 = L.circleMarker(
+                [21.3, 81.87],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.924689062552746, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_5577772f33f734884d0522ed21bdec26.bindTooltip(
+                `<div>
+                     <b>Chhattisgarh</b><br>Wave 1 (2020): 10,754 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_553d3cd01a4372ad009bbbec67945473 = L.circleMarker(
+                [20.95, 85.1],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.461608580976865, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_553d3cd01a4372ad009bbbec67945473.bindTooltip(
+                `<div>
+                     <b>Odisha</b><br>Wave 1 (2020): 113,671 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5300ade7bc56bdc13645e03daa1c104 = L.circleMarker(
+                [29.07, 76.09],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.223263777137113, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_a5300ade7bc56bdc13645e03daa1c104.bindTooltip(
+                `<div>
+                     <b>Haryana</b><br>Wave 1 (2020): 49,786 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e97de0e7f1f8108bd993185ee9ed035f = L.circleMarker(
+                [31.15, 75.34],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.55356785980752, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_e97de0e7f1f8108bd993185ee9ed035f.bindTooltip(
+                `<div>
+                     <b>Punjab</b><br>Wave 1 (2020): 62,050 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_990caa28c9c06193a302c889749a61a2 = L.circleMarker(
+                [23.36, 85.33],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.948899871755877, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_990caa28c9c06193a302c889749a61a2.bindTooltip(
+                `<div>
+                     <b>Jharkhand</b><br>Wave 1 (2020): 10,929 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b50c6041489348d0bd0f42b8d8af9b7 = L.circleMarker(
+                [30.07, 79.07],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.425507140989744, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_4b50c6041489348d0bd0f42b8d8af9b7.bindTooltip(
+                `<div>
+                     <b>Uttarakhand</b><br>Wave 1 (2020): 15,017 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d9d079964d6f388bd54bb0f49dd3855b = L.circleMarker(
+                [31.1, 77.17],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.302001592937062, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_d9d079964d6f388bd54bb0f49dd3855b.bindTooltip(
+                `<div>
+                     <b>Himachal Pradesh</b><br>Wave 1 (2020): 13,830 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bb47e6e5788da0d8906b07e0e977f1cc = L.circleMarker(
+                [15.3, 74.12],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.184628341859332, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_bb47e6e5788da0d8906b07e0e977f1cc.bindTooltip(
+                `<div>
+                     <b>Goa</b><br>Wave 1 (2020): 12,789 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a14cbd4ffe917b98c91d7f9b6847135 = L.circleMarker(
+                [26.2, 92.94],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.56706495769363, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_9a14cbd4ffe917b98c91d7f9b6847135.bindTooltip(
+                `<div>
+                     <b>Assam</b><br>Wave 1 (2020): 32,145 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7094665c21d5395578c27f7a7b81754 = L.circleMarker(
+                [17.99, 79.53],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.990074542173623, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_b7094665c21d5395578c27f7a7b81754.bindTooltip(
+                `<div>
+                     <b>Telangana</b><br>Wave 1 (2020): 83,009 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ffb9a38faff327590c57fa3f7d34676 = L.circleMarker(
+                [25.09, 85.31],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.669938198654048, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_4ffb9a38faff327590c57fa3f7d34676.bindTooltip(
+                `<div>
+                     <b>Bihar</b><br>Wave 1 (2020): 34,427 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e547d254e9a08ffa2e06b5ca4f9f391b = L.circleMarker(
+                [33.73, 76.92],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.728219525594866, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_e547d254e9a08ffa2e06b5ca4f9f391b.bindTooltip(
+                `<div>
+                     <b>Jammu & Kashmir</b><br>Wave 1 (2020): 35,791 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08b80de6cbf1f92638fb4acd3c41d59c = L.circleMarker(
+                [24.66, 93.9],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.116121094474781, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_08b80de6cbf1f92638fb4acd3c41d59c.bindTooltip(
+                `<div>
+                     <b>Manipur</b><br>Wave 1 (2020): 12,218 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_93f3f1438883894395f16fe5d226f97a = L.circleMarker(
+                [25.47, 91.37],
+                {"bubblingMouseEvents": true, "color": "#457b9d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#457b9d", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.366636118670227, "stroke": true, "weight": 3}
+            ).addTo(feature_group_2405e1d29765872542af352853e59025);
+        
+    
+            circle_marker_93f3f1438883894395f16fe5d226f97a.bindTooltip(
+                `<div>
+                     <b>Meghalaya</b><br>Wave 1 (2020): 14,439 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_2405e1d29765872542af352853e59025.addTo(map_4d2ac297c0a03328eb995cc9b697bf73);
+        
+    
+            var feature_group_979dd59632d12af26350421ea0c467a2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_20327cdb0b86c4766c145d821a601a83 = L.circleMarker(
+                [19.75, 75.71],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.705008132069167, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_20327cdb0b86c4766c145d821a601a83.bindTooltip(
+                `<div>
+                     <b>Maharashtra</b><br>Wave 2 (2021): 3,747,771 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50313554506dd3ab5e6fd0320b4d43f3 = L.circleMarker(
+                [10.85, 76.27],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.137962172688116, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_50313554506dd3ab5e6fd0320b4d43f3.bindTooltip(
+                `<div>
+                     <b>Kerala</b><br>Wave 2 (2021): 2,568,008 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c8576405a947d96c832a803e8e9b0e83 = L.circleMarker(
+                [15.32, 75.72],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.086329198101243, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_c8576405a947d96c832a803e8e9b0e83.bindTooltip(
+                `<div>
+                     <b>Karnataka</b><br>Wave 2 (2021): 1,273,847 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ca610bfbc745c1b8d1effda63ee8f972 = L.circleMarker(
+                [11.13, 78.66],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.073602736288947, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_ca610bfbc745c1b8d1effda63ee8f972.bindTooltip(
+                `<div>
+                     <b>Tamil Nadu</b><br>Wave 2 (2021): 1,263,085 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_73b38952c9ec0f73de4802a5d40b1141 = L.circleMarker(
+                [28.7, 77.1],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.223725668396874, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_73b38952c9ec0f73de4802a5d40b1141.bindTooltip(
+                `<div>
+                     <b>Delhi</b><br>Wave 2 (2021): 716,750 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_54e8b71a16334f1bebdea2b6382ae874 = L.circleMarker(
+                [27.57, 80.1],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.575620624204287, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_54e8b71a16334f1bebdea2b6382ae874.bindTooltip(
+                `<div>
+                     <b>Uttar Pradesh</b><br>Wave 2 (2021): 906,258 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6c9b22b04117e3d27f60e1571d1f00e = L.circleMarker(
+                [27.39, 73.89],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.463649644260418, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_a6c9b22b04117e3d27f60e1571d1f00e.bindTooltip(
+                `<div>
+                     <b>Rajasthan</b><br>Wave 2 (2021): 431,820 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a0c14bf09433e78ff32c42c60cc590a = L.circleMarker(
+                [22.26, 71.19],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.46051312458362, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_6a0c14bf09433e78ff32c42c60cc590a.bindTooltip(
+                `<div>
+                     <b>Gujarat</b><br>Wave 2 (2021): 430,918 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8d9ab850021e69ea0928ba936c0273fb = L.circleMarker(
+                [22.99, 87.85],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.326256596223008, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_8d9ab850021e69ea0928ba936c0273fb.bindTooltip(
+                `<div>
+                     <b>West Bengal</b><br>Wave 2 (2021): 767,456 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2d6dc6fe492ce3ce7b19742b0a910af8 = L.circleMarker(
+                [15.91, 79.74],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.84469819726329, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_2d6dc6fe492ce3ce7b19742b0a910af8.bindTooltip(
+                `<div>
+                     <b>Andhra Pradesh</b><br>Wave 2 (2021): 1,084,321 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dbeb77228c127e9942b12350e71b0687 = L.circleMarker(
+                [22.97, 78.66],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.446903783092743, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_dbeb77228c127e9942b12350e71b0687.bindTooltip(
+                `<div>
+                     <b>Madhya Pradesh</b><br>Wave 2 (2021): 427,026 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e16bef6cb97a15648b26cdf1ad880ed1 = L.circleMarker(
+                [21.3, 81.87],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.548323175324494, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_e16bef6cb97a15648b26cdf1ad880ed1.bindTooltip(
+                `<div>
+                     <b>Chhattisgarh</b><br>Wave 2 (2021): 456,897 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_046b82eab22f98bdb18b2fc798ce847e = L.circleMarker(
+                [20.95, 85.1],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.85251453063334, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_046b82eab22f98bdb18b2fc798ce847e.bindTooltip(
+                `<div>
+                     <b>Odisha</b><br>Wave 2 (2021): 559,617 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_51ee8b130d38b74171e3a78ebe1cee96 = L.circleMarker(
+                [29.07, 76.09],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.12042231956584, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_51ee8b130d38b74171e3a78ebe1cee96.bindTooltip(
+                `<div>
+                     <b>Haryana</b><br>Wave 2 (2021): 343,501 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6b1bd5c399094b08f35dea8f5865c730 = L.circleMarker(
+                [31.15, 75.34],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.92170517508427, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_6b1bd5c399094b08f35dea8f5865c730.bindTooltip(
+                `<div>
+                     <b>Punjab</b><br>Wave 2 (2021): 300,880 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d3a6b1154c29bf0750425f2f1ea5379a = L.circleMarker(
+                [23.36, 85.33],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.628869936117027, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_d3a6b1154c29bf0750425f2f1ea5379a.bindTooltip(
+                `<div>
+                     <b>Jharkhand</b><br>Wave 2 (2021): 127,080 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1249d84703865d92059ddb95fe1311c5 = L.circleMarker(
+                [30.07, 79.07],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.89043070560832, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_1249d84703865d92059ddb95fe1311c5.bindTooltip(
+                `<div>
+                     <b>Uttarakhand</b><br>Wave 2 (2021): 151,289 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4edfff36dd9c0a666793aed7372d3b6f = L.circleMarker(
+                [31.1, 77.17],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.257627210786602, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_4edfff36dd9c0a666793aed7372d3b6f.bindTooltip(
+                `<div>
+                     <b>Himachal Pradesh</b><br>Wave 2 (2021): 99,218 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e4f3d1bda6941290a591b952c10d51e = L.circleMarker(
+                [15.3, 74.12],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.129964742970767, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_2e4f3d1bda6941290a591b952c10d51e.bindTooltip(
+                `<div>
+                     <b>Goa</b><br>Wave 2 (2021): 91,123 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_80119e87458995b2ecf147f1925a988a = L.circleMarker(
+                [26.2, 92.94],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.631782086095583, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_80119e87458995b2ecf147f1925a988a.bindTooltip(
+                `<div>
+                     <b>Assam</b><br>Wave 2 (2021): 248,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e5bcd69d5f2061be9afce660e33554c1 = L.circleMarker(
+                [17.99, 79.53],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.06481501325401, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_e5bcd69d5f2061be9afce660e33554c1.bindTooltip(
+                `<div>
+                     <b>Telangana</b><br>Wave 2 (2021): 331,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b33cd9d0564e757b90acdbbf41829d6b = L.circleMarker(
+                [25.09, 85.31],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.917311630449174, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_b33cd9d0564e757b90acdbbf41829d6b.bindTooltip(
+                `<div>
+                     <b>Bihar</b><br>Wave 2 (2021): 300,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_047d6f024bcf19489585c31722f85fa9 = L.circleMarker(
+                [33.73, 76.92],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.271139948606795, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_047d6f024bcf19489585c31722f85fa9.bindTooltip(
+                `<div>
+                     <b>Jammu & Kashmir</b><br>Wave 2 (2021): 195,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2e2833b010e2c0b9cef233f8775a6929 = L.circleMarker(
+                [24.66, 93.9],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.372659968801255, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_2e2833b010e2c0b9cef233f8775a6929.bindTooltip(
+                `<div>
+                     <b>Manipur</b><br>Wave 2 (2021): 55,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b98c910bfdb8fc3d33415ac887c8d137 = L.circleMarker(
+                [25.47, 91.37],
+                {"bubblingMouseEvents": true, "color": "#e63946", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e63946", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.968173059758808, "stroke": true, "weight": 3}
+            ).addTo(feature_group_979dd59632d12af26350421ea0c467a2);
+        
+    
+            circle_marker_b98c910bfdb8fc3d33415ac887c8d137.bindTooltip(
+                `<div>
+                     <b>Meghalaya</b><br>Wave 2 (2021): 42,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var feature_group_a477600f18984aba39d7e998f1112a4b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_adb4aafd5608f812d51f6b28ec75fac8 = L.circleMarker(
+                [19.75, 75.71],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.209532486200814, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_adb4aafd5608f812d51f6b28ec75fac8.bindTooltip(
+                `<div>
+                     <b>Maharashtra</b><br>Wave 3 (2022): 710,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_09324557f528199aa94bfec24609bf4e = L.circleMarker(
+                [10.85, 76.27],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.957029901295343, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_09324557f528199aa94bfec24609bf4e.bindTooltip(
+                `<div>
+                     <b>Kerala</b><br>Wave 3 (2022): 600,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0e577bea077d7292ee097ad998ecca4a = L.circleMarker(
+                [15.32, 75.72],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.194954011091426, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_0e577bea077d7292ee097ad998ecca4a.bindTooltip(
+                `<div>
+                     <b>Karnataka</b><br>Wave 3 (2022): 361,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_505e0a8f8435e198d240e68388949d2f = L.circleMarker(
+                [11.13, 78.66],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.105055756646735, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_505e0a8f8435e198d240e68388949d2f.bindTooltip(
+                `<div>
+                     <b>Tamil Nadu</b><br>Wave 3 (2022): 340,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9088d87aeafe299c81b85883aab3a078 = L.circleMarker(
+                [28.7, 77.1],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.151076528118708, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_9088d87aeafe299c81b85883aab3a078.bindTooltip(
+                `<div>
+                     <b>Delhi</b><br>Wave 3 (2022): 180,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_570d620b9dd8bf18a3014753f5434fab = L.circleMarker(
+                [27.57, 80.1],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.271139948606795, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_570d620b9dd8bf18a3014753f5434fab.bindTooltip(
+                `<div>
+                     <b>Uttar Pradesh</b><br>Wave 3 (2022): 195,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eeb4d61d42f69745280d11d64a681847 = L.circleMarker(
+                [27.39, 73.89],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.71955619720081, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_eeb4d61d42f69745280d11d64a681847.bindTooltip(
+                `<div>
+                     <b>Rajasthan</b><br>Wave 3 (2022): 135,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_be8f68e69367b0a6cd72fd33af6865b4 = L.circleMarker(
+                [22.26, 71.19],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.65136315287762, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_be8f68e69367b0a6cd72fd33af6865b4.bindTooltip(
+                `<div>
+                     <b>Gujarat</b><br>Wave 3 (2022): 129,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c811f6fa568d91bd5b9da2a967eecc9 = L.circleMarker(
+                [22.99, 87.85],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.23217692143, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_1c811f6fa568d91bd5b9da2a967eecc9.bindTooltip(
+                `<div>
+                     <b>West Bengal</b><br>Wave 3 (2022): 190,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b075703afdb5b365aaa14be837679406 = L.circleMarker(
+                [15.91, 79.74],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.41759693739266, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_b075703afdb5b365aaa14be837679406.bindTooltip(
+                `<div>
+                     <b>Andhra Pradesh</b><br>Wave 3 (2022): 215,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e3fba7074f3935be626617954ce7af88 = L.circleMarker(
+                [22.97, 78.66],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.398668503221685, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_e3fba7074f3935be626617954ce7af88.bindTooltip(
+                `<div>
+                     <b>Madhya Pradesh</b><br>Wave 3 (2022): 109,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e64a5c906e159c1a9564345464ebf3c9 = L.circleMarker(
+                [21.3, 81.87],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.54288303259419, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_e64a5c906e159c1a9564345464ebf3c9.bindTooltip(
+                `<div>
+                     <b>Chhattisgarh</b><br>Wave 3 (2022): 120,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20b2fbe29d8053e9844c7b58db5edf57 = L.circleMarker(
+                [20.95, 85.1],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.66294613257374, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_20b2fbe29d8053e9844c7b58db5edf57.bindTooltip(
+                `<div>
+                     <b>Odisha</b><br>Wave 3 (2022): 130,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9dc85c973cbe8debe282eeedad27a6c5 = L.circleMarker(
+                [29.07, 76.09],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.239099442523422, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_9dc85c973cbe8debe282eeedad27a6c5.bindTooltip(
+                `<div>
+                     <b>Haryana</b><br>Wave 3 (2022): 98,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c3faf2035d0700272ecc21093834b926 = L.circleMarker(
+                [31.15, 75.34],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.85775266561496, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_c3faf2035d0700272ecc21093834b926.bindTooltip(
+                `<div>
+                     <b>Punjab</b><br>Wave 3 (2022): 76,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b9435182700c6c9c02663c0a4921084 = L.circleMarker(
+                [23.36, 85.33],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.00346797532886, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_2b9435182700c6c9c02663c0a4921084.bindTooltip(
+                `<div>
+                     <b>Jharkhand</b><br>Wave 3 (2022): 43,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b99b986a56ebe3fbb19ae3d643885da = L.circleMarker(
+                [30.07, 79.07],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.932027603449365, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_2b99b986a56ebe3fbb19ae3d643885da.bindTooltip(
+                `<div>
+                     <b>Uttarakhand</b><br>Wave 3 (2022): 41,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b38936452b454f1b44e4df3401e9bc0a = L.circleMarker(
+                [31.1, 77.17],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.190006654575539, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_b38936452b454f1b44e4df3401e9bc0a.bindTooltip(
+                `<div>
+                     <b>Himachal Pradesh</b><br>Wave 3 (2022): 25,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9943e2b8de727a1270cb2e0ee669109f = L.circleMarker(
+                [15.3, 74.12],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.359993254207975, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_9943e2b8de727a1270cb2e0ee669109f.bindTooltip(
+                `<div>
+                     <b>Goa</b><br>Wave 3 (2022): 28,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d57f7d321b8fc99c75f555854e96441b = L.circleMarker(
+                [26.2, 92.94],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.52796830469555, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_d57f7d321b8fc99c75f555854e96441b.bindTooltip(
+                `<div>
+                     <b>Assam</b><br>Wave 3 (2022): 61,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e6ec0b17864be35082fc96e2ce4c056c = L.circleMarker(
+                [17.99, 79.53],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.93469162036684, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_e6ec0b17864be35082fc96e2ce4c056c.bindTooltip(
+                `<div>
+                     <b>Telangana</b><br>Wave 3 (2022): 80,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9df78503d0dcf2cc9418cad72e032999 = L.circleMarker(
+                [25.09, 85.31],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.043171304612528, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_9df78503d0dcf2cc9418cad72e032999.bindTooltip(
+                `<div>
+                     <b>Bihar</b><br>Wave 3 (2022): 86,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_37d141f0b95d991557c4a765e37e7441 = L.circleMarker(
+                [33.73, 76.92],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.168465684509528, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_37d141f0b95d991557c4a765e37e7441.bindTooltip(
+                `<div>
+                     <b>Jammu & Kashmir</b><br>Wave 3 (2022): 48,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fef121c1e323c99bc80a409b88aaaa4b = L.circleMarker(
+                [24.66, 93.9],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.320326051926887, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_fef121c1e323c99bc80a409b88aaaa4b.bindTooltip(
+                `<div>
+                     <b>Manipur</b><br>Wave 3 (2022): 14,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b3f9e9d7c1f19012283baa1f1214bf92 = L.circleMarker(
+                [25.47, 91.37],
+                {"bubblingMouseEvents": true, "color": "#f4a261", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f4a261", "fillOpacity": 0.55, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.089117887947161, "stroke": true, "weight": 3}
+            ).addTo(feature_group_a477600f18984aba39d7e998f1112a4b);
+        
+    
+            circle_marker_b3f9e9d7c1f19012283baa1f1214bf92.bindTooltip(
+                `<div>
+                     <b>Meghalaya</b><br>Wave 3 (2022): 12,000 cases
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_2b4f7475baf936d5a255e960ef4c1a1f_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_0f3093892a13d97a60c656109c948ad9,
+                },
+                overlays :  {
+                    "Wave 1 (2020)" : feature_group_2405e1d29765872542af352853e59025,
+                    "Wave 2 (2021)" : feature_group_979dd59632d12af26350421ea0c467a2,
+                    "Wave 3 (2022)" : feature_group_a477600f18984aba39d7e998f1112a4b,
+                },
+            };
+            let layer_control_2b4f7475baf936d5a255e960ef4c1a1f = L.control.layers(
+                layer_control_2b4f7475baf936d5a255e960ef4c1a1f_layers.base_layers,
+                layer_control_2b4f7475baf936d5a255e960ef4c1a1f_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_4d2ac297c0a03328eb995cc9b697bf73);
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_4d2ac297c0a03328eb995cc9b697bf73);
+        
+</script>
+</html>
